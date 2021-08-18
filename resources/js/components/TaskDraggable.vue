@@ -4,7 +4,7 @@
         <div class="col-md-6">
             <section class="list">
                 <header>UPCOMING</header>
-                <draggable class="drag-area" :list="tasksNotCompletedNew" :options="{animation:200, group:'status'}" :element="'article'" @add="onAdd($event, false)"  @change="update">
+                <draggable ghostClass="on-drag" animation="400" class="drag-area" :list="tasksNotCompletedNew" :options="{animation:200, group:'status'}" :element="'article'" @add="onAdd($event, false)"  @change="update">
                     <article class="card" v-for="(task, index) in tasksNotCompletedNew" :key="task.id" :data-id="task.id">
                         <header>
                             {{ task.title }}
@@ -16,7 +16,7 @@
         <div class="col-md-6">
             <section class="list">
                 <header>COMPLETED</header>
-                <draggable class="drag-area"  :list="tasksCompletedNew" :options="{animation:200, group:'status'}" :element="'article'" @add="onAdd($event, true)"  @change="update">
+                <draggable ghostClass="on-drag" animation="400" class="drag-area"  :list="tasksCompletedNew" :options="{animation:200, group:'status'}" :element="'article'" @add="onAdd($event, true)"  @change="update">
                     <article class="card" v-for="(task, index) in tasksCompletedNew" :key="task.id" :data-id="task.id">
                         <header>
                             {{ task.title }}
@@ -102,7 +102,11 @@
         height: 100%;
     } */
 
-
+    .on-drag{
+        background-color: #4833C0;
+        color: #fff;
+        z-index: 10;
+    }
     .list {
       background-color: #8d0505;
       border-radius: 3px;

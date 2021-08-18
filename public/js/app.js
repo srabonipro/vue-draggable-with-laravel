@@ -6462,7 +6462,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* main {\n    height: 100%;\n    width: 100%;\n    display: flex;\n    justify-content: flex-start;\n    padding: 20px 0 30px 0;\n    box-sizing: border-box;\n}\nmain::before{\n    content: '';\n    float: right;\n    min-width: 20px;\n    width: 10px;\n    height: 100%;\n}\nmain::after{\n    content: '';\n    float: right;\n    min-width: 20px;\n    width: 10px;\n    height: 100%;\n} */\n.list {\n  background-color: #8d0505;\n  border-radius: 3px;\n  margin: 5px 5px;\n  padding: 10px;\n  width: 100%;\n}\n.list>header {\n  font-weight: bold;\n  color: white;\n  text-align: center;\n  font-size: 20px;\n  line-height: 28px;\n  cursor: -webkit-grab;\n  cursor: grab;\n}\n.list article {\n  border-radius: 3px;\n  margin-top: 10px;\n}\n.list .card {\n  background-color: #FFF;\n  border-bottom: 1px solid #CCC;\n  padding: 15px 10px;\n  cursor: pointer;\n  font-size: 16px;\n  font-weight: bolder;\n}\n.list .card:hover {\n  background-color: rgb(0, 156, 135);\n  cursor: -webkit-grab;\n  cursor: grab;\n}\n.drag-area{\n min-height: 10px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* main {\n    height: 100%;\n    width: 100%;\n    display: flex;\n    justify-content: flex-start;\n    padding: 20px 0 30px 0;\n    box-sizing: border-box;\n}\nmain::before{\n    content: '';\n    float: right;\n    min-width: 20px;\n    width: 10px;\n    height: 100%;\n}\nmain::after{\n    content: '';\n    float: right;\n    min-width: 20px;\n    width: 10px;\n    height: 100%;\n} */\n.on-drag{\n    background-color: #4833C0;\n    color: #fff;\n    z-index: 10;\n}\n.list {\n  background-color: #8d0505;\n  border-radius: 3px;\n  margin: 5px 5px;\n  padding: 10px;\n  width: 100%;\n}\n.list>header {\n  font-weight: bold;\n  color: white;\n  text-align: center;\n  font-size: 20px;\n  line-height: 28px;\n  cursor: -webkit-grab;\n  cursor: grab;\n}\n.list article {\n  border-radius: 3px;\n  margin-top: 10px;\n}\n.list .card {\n  background-color: #FFF;\n  border-bottom: 1px solid #CCC;\n  padding: 15px 10px;\n  cursor: pointer;\n  font-size: 16px;\n  font-weight: bolder;\n}\n.list .card:hover {\n  background-color: rgb(0, 156, 135);\n  cursor: -webkit-grab;\n  cursor: grab;\n}\n.drag-area{\n min-height: 10px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -41630,6 +41630,8 @@ var render = function() {
               {
                 staticClass: "drag-area",
                 attrs: {
+                  ghostClass: "on-drag",
+                  animation: "400",
                   list: _vm.tasksNotCompletedNew,
                   options: { animation: 200, group: "status" },
                   element: "article"
@@ -41679,6 +41681,8 @@ var render = function() {
               {
                 staticClass: "drag-area",
                 attrs: {
+                  ghostClass: "on-drag",
+                  animation: "400",
                   list: _vm.tasksCompletedNew,
                   options: { animation: 200, group: "status" },
                   element: "article"
